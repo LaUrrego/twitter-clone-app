@@ -191,12 +191,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="280" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uX-yu-mkK">
+                                <rect key="frame" x="363.33333333333331" y="136" width="30.666666666666686" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RK1-nc-45z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RK1-nc-45z" firstAttribute="trailing" secondItem="3uX-yu-mkK" secondAttribute="trailing" constant="20" id="Ipu-Sj-yk6"/>
                             <constraint firstItem="fmi-cm-R2Q" firstAttribute="leading" secondItem="RK1-nc-45z" secondAttribute="leading" id="KuG-9r-gVd"/>
                             <constraint firstItem="RK1-nc-45z" firstAttribute="trailing" secondItem="fmi-cm-R2Q" secondAttribute="trailing" id="S4g-XV-WLQ"/>
+                            <constraint firstItem="3uX-yu-mkK" firstAttribute="top" secondItem="fmi-cm-R2Q" secondAttribute="bottom" constant="8" symbolic="YES" id="hIq-Bf-BD4"/>
                             <constraint firstItem="fmi-cm-R2Q" firstAttribute="top" secondItem="RK1-nc-45z" secondAttribute="top" id="uX3-iF-QTr"/>
                         </constraints>
                     </view>
@@ -215,12 +223,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tweetCharLabel" destination="3uX-yu-mkK" id="LJ8-x5-ZLP"/>
                         <outlet property="tweetTextView" destination="fmi-cm-R2Q" id="kad-vn-j61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6AX-F4-ZB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3307" y="55"/>
+            <point key="canvasLocation" x="3305.7971014492755" y="54.619565217391312"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TAW-rh-w7k">

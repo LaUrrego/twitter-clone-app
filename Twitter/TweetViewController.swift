@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetViewController: UIViewController {
+class TweetViewController: UIViewController,UITextViewDelegate {
 
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true)
@@ -30,14 +30,24 @@ class TweetViewController: UIViewController {
     
     @IBOutlet weak var tweetTextView: UITextView!
     
+    
+    @IBOutlet weak var tweetCharLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tweetTextView.becomeFirstResponder()
+        tweetTextView.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
-
+    let maxLength = 280
+    func textViewDidChange(_ textView: UITextView) {
+            tweetCharLabel.text = "\(maxLength - textView.text.count)"
+        }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            return textView.text.count + (text.count - range.length) <= maxLength
+        }
     /*
     // MARK: - Navigation
 
